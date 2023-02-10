@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run pull request stats
-        uses: flowwer-dev/pull-request-stats@master
+        uses: chennighan/pull-request-stats@feature/add-number-of-prs
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           organization: 'edx'
