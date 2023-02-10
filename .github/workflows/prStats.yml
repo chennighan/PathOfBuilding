@@ -1,0 +1,20 @@
+name: pobc Pull Request Stats
+
+on:
+  pull_request:
+    types: [opened]
+  workflow_dispatch:
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run pull request stats
+        uses: flowwer-dev/pull-request-stats@master
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          organization: 'edx'
+          period: 30
+          charts: true
+          disable-links: true
+          sort-by: 'COMMENTS'
